@@ -14,9 +14,9 @@ before_install:
   - export PATH=$VOLTA_HOME:$PATH
 
 install:
-  - npm ci --no-audit
+  - yarn install --frozen-lockfile
 
 script:
-  - npm run lint --if-present
-  - npm run test
-  - npm run build --if-present
+  - yarn lint --if-present
+  - yarn test
+  - yarn build --if-present
